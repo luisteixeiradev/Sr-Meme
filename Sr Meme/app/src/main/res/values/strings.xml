@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sr. Meme</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="noMemesTxt">Ainda não publicaste nenhum meme, queres fazê-lo?</string>
+    <string name="noResultsTxt">Esta categoria ainda não tem nenhum meme, queres ser o/a primeiro/a?</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="5dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/positionRecycler"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:background="@drawable/my_ranking_card_border"
+        android:gravity="center"
+        android:text="#1"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/usernameRecycler"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_toRightOf="@+id/positionRecycler"
+        android:background="@drawable/my_ranking_card_border"
+        android:gravity="center"
+        android:text="Tiago Moreira"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/pointsRecycler"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_toRightOf="@+id/usernameRecycler"
+        android:background="@drawable/my_ranking_card_border"
+        android:gravity="center"
+        android:text="50.000"
+        android:textColor="@color/colorBlack"
+        android:textSize="18dp" />
+
+</RelativeLayout>

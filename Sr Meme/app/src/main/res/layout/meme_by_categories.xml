@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pt.srmeme.app.MainActivities.MemesByCategories">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/memeByCategoryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/viewForNoResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/noResultsImg"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/meme_teste3" />
+
+        <TextView
+            android:id="@+id/noResultsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noResultsImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/noResultsTxt"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/noResultsBtn"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/noResultsText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorOrange"
+            android:onClick="goToGallery"
+            android:text="Quero"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/goBackMemesByCategories"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="13dp"
+        android:translationZ="4dp"
+        android:onClick="goBack"
+        android:src="@drawable/ic_navigate_before_black_24dp" />
+
+</RelativeLayout>

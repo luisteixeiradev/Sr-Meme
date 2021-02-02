@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pt.srmeme.app.MainActivities.Publish">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ImageView
+        android:id="@+id/publishImg"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="110dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/publishImg"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorLightGrey"
+        android:hint="Descrição (opcional)"
+        android:padding="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btnCategories"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="140dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:onClick="goToCategoriesPublishActivity"
+            android:text="Categorias"
+            app:strokeColor="@color/colorOrange" />
+
+        <Button
+            android:id="@+id/btnPublish"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/btnCategories"
+            android:onClick="Publish"
+            android:text="Publicar" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:text="Tens de escolher pelo menos uma categria antes de publicar"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/btnView"
+        android:id="@+id/txtInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

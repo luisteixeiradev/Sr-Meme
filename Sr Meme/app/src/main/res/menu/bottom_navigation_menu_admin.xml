@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/reportedMemes"
+        android:icon="@drawable/ic_baseline_error_outline_24"
+        android:title="Memes Denunciados"
+        />
+    <item
+        android:id="@+id/sugestedCategories"
+        android:icon="@drawable/ic_list_black_24dp"
+        android:title="Categorias Sugeridas"
+        />
+
+</menu>

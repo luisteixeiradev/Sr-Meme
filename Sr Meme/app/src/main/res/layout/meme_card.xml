@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="12dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/meme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/memeDescription"
+            style="@style/memes_description"
+            android:layout_below="@+id/toolbar"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/memeImg"
+            style="@style/memes_images"
+            android:layout_below="@+id/memeDescription"
+            android:scaleType="fitXY"
+            android:src="@drawable/meme_teste_2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/memeImg"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImg"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/userImg" />
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:id="@+id/iconLikeLayout"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/iconLike"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_like_border" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/likeAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/iconLikeLayout"
+                    android:text="-1" />
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:id="@+id/iconMenuLayout"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_toRightOf="@+id/likeAmount">
+
+                    <ImageView
+                        android:id="@+id/iconMenu"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/colorBlack"
+                        android:src="@drawable/ic_baseline_error_outline_24" />
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

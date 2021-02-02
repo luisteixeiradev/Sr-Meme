@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pt.srmeme.app.Categories.CategoriesPublish">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <!--<EditText
+            style="@style/editTexts"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/searchBarPublish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginHorizontal="20dp"
+            />-->
+
+        <AutoCompleteTextView
+            android:id="@+id/searchBarPublish"
+            style="@style/editTexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textCapSentences"
+            android:singleLine="true"
+            android:textSize="18dp" />
+
+
+        <ImageView
+            android:id="@+id/searchIconPublish"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@id/searchBarPublish"
+            android:layout_marginTop="30dp"
+            android:onClick="showCategorySelected"
+            android:src="@drawable/ic_search_black_24dp" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/btnResetCategorySearchedPublish"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@id/searchBarPublish"
+            android:layout_marginTop="30dp"
+            android:onClick="showAllCategories"
+            android:src="@drawable/ic_close_black_24dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoriesPublishRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchBarPublish"
+            android:layout_marginBottom="100dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/sugestCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="Sugerir"
+            android:textColor="@color/colorOrange"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/btnCleanPublishCategories"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/sugestCategory"
+            android:onClick="cleanCategories"
+            android:text="Limpar"
+            android:textColor="@color/colorOrange"
+            app:strokeColor="@color/colorOrange" />
+
+        <Button
+            android:id="@+id/btnShowCategories"
+            android:layout_width="110dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btnCleanPublishCategories"
+            android:background="@color/colorOrange"
+            android:onClick="saveCategories"
+            android:text="Guardar"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
